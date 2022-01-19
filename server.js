@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}));
 
 // USER API's
 app.post('/api/users', async (req, res)=>{
-    const {usernames} = req.body;
+    const {username} = req.body;
 
     if (!username){
         return res.status(400).json({error: 'You must provide a username'});
